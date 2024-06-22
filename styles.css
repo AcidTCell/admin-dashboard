@@ -84,6 +84,10 @@ h3{
     margin-right: auto;
 }
 
+button{
+    border-radius: 8px;
+}
+
 .menuContainer{
     display: flex;
     gap: 5px;
