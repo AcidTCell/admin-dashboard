@@ -17,7 +17,8 @@ body{
     grid-template-columns: 1fr 3fr;
     grid-template-rows: repeat(9, 1fr);
     gap: 15px;
-    padding: 15px;
+    
+    
     
 }
 
@@ -28,17 +29,65 @@ body{
 }
 
 .branding{
-
+    height: 5vh;
+    align-content: center;
 }
 
 .navigation{
-    
+
 }
 
 .headerContainer{
     display: grid;
-    grid-row: 1/2;
+    grid-row: 1/2; 
     
+}
+
+h1{
+    font-size: 1.3rem;
+}
+
+h3{
+    font-size: 0.8rem;
+}
+
+.upperHeader{
+    display: flex;
+    height: 4.5vh;
+    align-items: center;
+}
+
+.searchBar{
+    height: 2.5vh;
+    margin-right: auto;
+}
+
+.charIconSmall{
+    height: 2.5vh;
+}
+
+.userName{
+    font-weight: bold;
+}
+
+.lowerHeader{
+    display: flex;
+    height: 4.5vh;
+    align-items: center;
+}
+
+.charIcon1{
+    height: 4.5vh;
+}
+
+.introduction{
+    margin-right: auto;
+}
+
+.menuContainer{
+    display: flex;
+    gap: 5px;
+    margin-right: 5px;
 }
 
 .contentContainer{
@@ -47,6 +96,7 @@ body{
     grid-row: 2/9;
     grid-template-columns: 2fr 1fr;
     gap: 15px;
+    padding-right: 15px;
 }
 
 .projects{
