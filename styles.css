@@ -1,6 +1,6 @@
 *{
     margin: 0;
-    border: 1px solid black;
+    
 }
 
 html{
@@ -9,7 +9,7 @@ html{
 }
 
 :root {
-    --color-50: #f0f9ff;
+    --content: #f0f9ff;
     --color-100: #e0f2fe;
     --color-200: #bae6fd;
     --color-300: #7dd3fc;
@@ -20,6 +20,7 @@ html{
     --color-800: #075985;
     --color-900: #0c4a6e;
     --color-950: #082f49;
+    --cardSide: #334155;
   }
 
 body{
@@ -28,7 +29,7 @@ body{
 
 .mainContainer{
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 6fr;
     grid-template-rows: repeat(9, 1fr);
     
     
@@ -91,6 +92,14 @@ body{
 .headerContainer{
     display: grid;
     grid-row: 1/2; 
+    gap: 10px;
+    padding-left: 30px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    z-index: 0;
+    box-shadow: -3px -4px 15px 1px rgba(0, 0, 0, 0.5);
+    
     
 }
 
@@ -109,8 +118,14 @@ h3{
 }
 
 .searchBar{
-    height: 2.5vh;
+    height: 2vh;
     margin-right: auto;
+}
+
+.menuContainer{
+    display: flex;
+    gap: 10px;
+    margin-right: 5px;
 }
 
 .charIconSmall{
@@ -119,6 +134,7 @@ h3{
 
 .userName{
     font-weight: bold;
+    border: none;
 }
 
 .lowerHeader{
@@ -133,17 +149,22 @@ h3{
 
 .introduction{
     margin-right: auto;
+    padding-left: 5px;
 }
 
-button{
-    border-radius: 8px;
+.menuButton{
+    border-radius: 15px;
+    background-color: var(--sidebar);
+    border: none;
+    padding: 9px 20px 9px 20px;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.3s ease;
 }
 
-.menuContainer{
-    display: flex;
-    gap: 5px;
-    margin-right: 5px;
-}
+.menuButton:hover {
+    background-color: #0056b3; /* Change background color on hover */
+  }
 
 .contentContainer{
     display: grid;
@@ -152,7 +173,10 @@ button{
     grid-template-columns: 2fr 1fr;
     gap: 15px;
     padding-right: 15px;
-    background-color: var(--dark);
+    padding-left: 20px;
+    padding-top: 30px;
+    background-color: var(--color-100);
+    
 }
 
 .contentLabel1{
@@ -169,7 +193,43 @@ button{
 }
 
 .projects .card{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 7fr 1fr;
     height: 220px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    border-left: 5px solid var(--cardSide);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    
+}
+
+.cardHeader{
+    font-weight: bold;
+    grid-column: 1/4;
+}
+
+.cardDescription{
+    font-size: 0.8rem;
+    grid-column: 1/4;
+    grid-row: 2/3;
+    color: #3f3f46;
+
+}
+
+.cardIconContainer{
+    display: flex;
+    align-items: center;
+    padding-right: 15px;
+    gap: 10px;
+    margin-top: 80px ;
+    grid-column: 3/4;
+    grid-row: 3/4;
+}
+
+.cardIcon{
+    height: 2vh;
 }
 
 .contentLabel2{
