@@ -24,17 +24,36 @@ body{
 
 .sidebarContainer{
     display: grid;
-    grid-row: 1/10;
-
+    grid-template-rows: 1fr 13fr;
+    grid-row: 1/11;
+    padding-left: 15px;
+    background-color: blanchedalmond;
 }
 
+
+
 .branding{
+    display: flex;
     height: 5vh;
-    align-content: center;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
+
+.dashboard{
+    height: 3vh;
+    align-items: center;
 }
 
 .navigation{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    grid-row: 2/9;
+}
 
+.navItem{
+    padding: 0.2rem;
 }
 
 .headerContainer{
@@ -103,22 +122,39 @@ button{
     padding-right: 15px;
 }
 
+.contentLabel1{
+    align-content: center;
+    font-weight: bold;
+}
+
 .projects{
     display:grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
-    grid-row:1/3;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    grid-row:2/11;
     gap: 15px;
     align-content:space-between;
 }
 
 .projects .card{
-    height: 120px;
+    height: 220px;
+}
+
+.contentLabel2{
+    align-content: center;
+    font-weight: bold;
 }
 
 .announcements{
+    grid-column: 2/3;
+    grid-row: 2/6;
+}
 
+.contentLabel3{
+    align-self:self-end;
+    font-weight: bold;
 }
 
 .trending{
     grid-column: 2/3;
+    grid-row: 7/11;
 }
