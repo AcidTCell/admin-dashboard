@@ -21,10 +21,12 @@ html{
     --color-900: #0c4a6e;
     --color-950: #082f49;
     --cardSide: #334155;
+    --cardHover: #cbd5e1;
   }
 
 body{
  font-family: Roboto;
+ background-color: var(--color-100);
 }
 
 .mainContainer{
@@ -77,6 +79,12 @@ body{
     display: flex;
     gap: 5px;
     align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navContainer:hover{
+    color: var(--color-100);
+    transform: translateY(-5px);
 }
 
 .navIcon{
@@ -99,12 +107,14 @@ body{
     padding-top: 10px;
     z-index: 0;
     box-shadow: -3px -4px 15px 1px rgba(0, 0, 0, 0.5);
+    background-color: var(--content);
     
     
 }
 
 h1{
-    font-size: 1.3rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
 }
 
 h3{
@@ -141,6 +151,7 @@ h3{
     display: flex;
     height: 4.5vh;
     align-items: center;
+    gap: 5px;
 }
 
 .charIcon1{
@@ -182,6 +193,7 @@ h3{
 .contentLabel1{
     align-content: center;
     font-weight: bold;
+    font-size: 1.3rem;
 }
 
 .projects{
@@ -202,7 +214,14 @@ h3{
     padding: 30px;
     border-left: 5px solid var(--cardSide);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    gap: 10px;
+    transition: transform 0.3s ease-in-out;
     
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    background-color: var(--cardHover);
 }
 
 .cardHeader{
@@ -213,7 +232,7 @@ h3{
 .cardDescription{
     font-size: 0.8rem;
     grid-column: 1/4;
-    grid-row: 2/3;
+    grid-row: 2/4;
     color: #3f3f46;
 
 }
@@ -221,20 +240,62 @@ h3{
 .cardIconContainer{
     display: flex;
     align-items: center;
+    justify-content: end;
     padding-right: 15px;
     gap: 10px;
     margin-top: 80px ;
     grid-column: 3/4;
     grid-row: 3/4;
+    transition: transform 0.3s ease-in-out;
 }
 
 .cardIcon{
     height: 2vh;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cardIcon:hover{
+    transform: translateY(-8px);
 }
 
 .contentLabel2{
     align-content: center;
     font-weight: bold;
+    font-size: 1.3rem;
+}
+
+.card2{
+    display: grid;
+    grid-row: 2/6;
+    grid-column: 2/3;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    grid-template-rows: repeat(3, 1fr);
+    padding: 30px;
+    align-items: center;
+    
+    
+}
+
+.card2Group{
+    display: grid;
+    gap: 5px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card2Group:hover{
+    transform: translateY(-8px);
+    
+}
+
+.card2Header{
+    font-weight: bold;
+}
+
+.card2Description{
+    font-size: 0.8rem;
+    color: #3f3f46;
 }
 
 .announcements{
@@ -245,9 +306,32 @@ h3{
 .contentLabel3{
     align-self:self-end;
     font-weight: bold;
+    font-size: 1.3rem;
 }
 
 .trending{
     grid-column: 2/3;
     grid-row: 7/11;
+}
+
+.card3{
+    display: grid;
+    grid-row: 7/11;
+    grid-column: 2/3;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 30px;
+    grid-template-rows: repeat(4, 1fr);
+    align-items: center;
+    
+}
+
+.card3Group{
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card3Group:hover{
+    transform: translateY(-8px) translateX(5px);
 }
